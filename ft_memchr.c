@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/19 22:46:30 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/21 20:00:40 by taehkwon         ###   ########.fr       */
+/*   Created: 2023/03/21 15:12:58 by taehkwon          #+#    #+#             */
+/*   Updated: 2023/03/21 15:19:40 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*dst_p;
-	unsigned char	*src_p;
+	unsigned char	*p;
+	unsigned char	find;
+	size_t			i;
 
-	dst_p = (unsigned char *)dst;
-	src_p = (unsigned char *)src;
-	if (!dst || !src)
-		return (NULL);
-	while (n--)
+	p = (unsigned char *)s;
+	find = (unsigned char)c;
+	i = 0;
+	while (i < n)
 	{
-		*dst_p = *src_p;
-		dst_p++;
-		src_p++;
+		if (p[i] == find)
+			return ((void *)(p + i));
+		i++;
 	}
-	return (dst);
+	return (0);
 }
