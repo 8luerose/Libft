@@ -6,13 +6,15 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 14:15:53 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/22 21:43:28 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/23 17:09:49 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
