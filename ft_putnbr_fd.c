@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 17:17:40 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/26 20:21:19 by taehkwon         ###   ########.fr       */
+/*   Created: 2023/03/24 21:44:54 by taehkwon          #+#    #+#             */
+/*   Updated: 2023/03/26 16:13:02 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	size_t	len;
+	char		c;
+	long long	nb;
 
-	len = ft_strlen(src);
-	if (!dstsize)
-		return (len);
-	i = 0;
-	while ((i < len) && (i + 1 < dstsize))
+	if (n == -2147483648)
 	{
-		dst[i] = src[i];
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	if (dstsize != 0)
-		dst[i] = '\0';
-	return (len);
+	nb = (long long)n;
+	if (nb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = -nb;
+	}
+	if (nb >= 10)
+		ft_putnbr_fd(nb / 10, fd);
+	c = nb % 10 + '0';
+	ft_putchar_fd(c, fd);
 }
-
-/*
-if (!dst || !src)
-		return (0);
-*/

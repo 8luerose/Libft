@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 17:17:40 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/26 20:21:19 by taehkwon         ###   ########.fr       */
+/*   Created: 2023/03/26 17:29:23 by taehkwon          #+#    #+#             */
+/*   Updated: 2023/03/26 18:47:49 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	i;
-	size_t	len;
+	t_list	*tmp;
 
-	len = ft_strlen(src);
-	if (!dstsize)
-		return (len);
-	i = 0;
-	while ((i < len) && (i + 1 < dstsize))
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
-		dst[i] = src[i];
-		i++;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		(*lst) = tmp;
 	}
-	if (dstsize != 0)
-		dst[i] = '\0';
-	return (len);
 }
-
-/*
-if (!dst || !src)
-		return (0);
-*/

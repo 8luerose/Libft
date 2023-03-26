@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:37:58 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/21 16:21:59 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/26 20:10:49 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (needle_len == 0)
 		return ((char *)haystack);
 	i = 0;
-	while (haystack[i] != '\0' && i < len)
+	while (haystack[i] != '\0' && i + needle_len <= len)
 	{
 		if (haystack[i] == needle[0])
 		{

@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:06:11 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/23 21:25:57 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/26 19:42:15 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ static char	*next_word(char **s, char c)
 		(*s)++;
 	word_start = *s;
 	word_end = ft_strchr(*s, c);
-	if (word_end == '\0')
+	if (word_end == 0)
 	{
 		word = ft_strdup(word_start);
-		*s = *(s + (ft_strlen(word_start)));
+		*s = (*s + (ft_strlen(word_start)));
 	}
 	else
 	{
