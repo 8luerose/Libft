@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:17:40 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/26 20:21:19 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/27 19:52:18 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = '\0';
 	return (len);
 }
-
-/*
-if (!dst || !src)
-		return (0);
-*/

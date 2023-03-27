@@ -6,13 +6,13 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:33:31 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/25 22:59:38 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/27 19:52:47 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ' || (c >= 9 && c <= 13))
 		return (1);

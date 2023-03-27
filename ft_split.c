@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:06:11 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/27 16:58:04 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/27 19:52:08 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,13 +94,3 @@ char	**ft_split(char const *s, char c)
 	result[i] = NULL;
 	return (result);
 }
-
-//"Hello, World! How are you?";
-//" ,!?"
-/*
-
-1. 구분자면 단어 아님
-2. 바로 이전이 단어 아니었을 때, 단어 발견하면 단어 1로 변경, 단어 갯수 증가
-3. 다음 문자로 이동
-
-*/

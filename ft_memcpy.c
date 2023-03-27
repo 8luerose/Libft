@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 22:46:30 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/26 20:14:22 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/27 19:51:51 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/* if (!dst || !src)
-		return (NULL);*/
