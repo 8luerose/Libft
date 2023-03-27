@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 20:36:21 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/26 19:42:21 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/27 13:51:03 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_split(char const *s, char c);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
