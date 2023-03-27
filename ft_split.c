@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:06:11 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/26 19:42:15 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/27 16:58:04 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	result[i] = '\0';
+	result[i] = NULL;
 	return (result);
 }
 
