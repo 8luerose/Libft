@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:33:31 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/27 19:52:47 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/28 20:16:44 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *str)
 {
-	long long	result;
+	long		result;
 	int			i;
 	int			sign;
 
