@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 13:04:10 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/03/21 14:13:49 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/03/29 18:04:57 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while ((s1[i] != '\0' || s2[i] != '\0') && (i < n))
 	{
-		case1 = s1[i];
-		case2 = s2[i];
+		case1 = (unsigned char)s1[i];
+		case2 = (unsigned char)s2[i];
 		if (case1 != case2)
 			return (case1 - case2);
 		i++;
